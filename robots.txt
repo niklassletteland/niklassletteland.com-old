@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /archives/*
+Disallow: /blog/*
+Disallow: /blog-old/*
+Disallow: /files/*
+Disallow: /_notes/*

@@ -1,0 +1,469 @@
+/**
+ * Overall stylesheet for niklassletteland.com
+ */ 
+ 
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'HelveticaNeueRegular', Helvetica, calibri, san-serif;
+}
+	
+body {
+	font-family: calibri, helvetica, arial, sans-serif;
+	letter-spacing: 3px;
+	background: #dadada;
+	background-image: url('squairy_light.png'); /* background image from http://subtlepatterns.com/ */
+}
+	
+#wrapper {
+	position: relative;
+	width: 70%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+	
+header {
+	margin: 70px 0 10px 0;
+}
+	
+	header h1, header h2 {
+		font-weight: normal;
+	}
+		
+	header h1 {
+		font-size: 2.5em;
+		letter-spacing: 5px;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+	}
+		
+		header h1 a {
+			color: black;
+			text-decoration: none;
+		}
+		
+	header h2 {
+		font-size: 1.1em;
+		letter-spacing: normal;
+		text-indent: 30px;
+		letter-spacing: 2px;
+		margin-bottom: 10px;
+	}
+	
+	header nav {
+		position: relative;
+		height: 35px;
+		width: 100%;
+	}
+	
+	header nav ul {
+		list-style-type: none;
+	}
+		
+		header nav ul li {
+			float: left;
+		}
+			
+			header nav ul li a {
+				color: black;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-size: 1.2em;
+				padding: 10px 15px;
+				border: 1px solid rgba(0, 0, 0, 0);
+				transition: background-color 0.25s;
+			}
+			
+			header nav ul li a:hover {
+				border: 1px solid black;
+			}
+			
+			header nav ul li a#about:hover { background-color: #3C3CFF;}
+			header nav ul li a#portfolio:hover { background-color: #00BF00;}
+			header nav ul li a#sandbox:hover { background-color: #FF2828;}
+			header nav ul li a#blog:hover { background-color: #FFB12C;}
+			header nav ul li a#photography:hover { background-color: #3C3CFF;}
+			header nav ul li a#contact:hover { background-color: #FFB935;}			
+			
+#menu_icon {
+	display: none;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: -40px;
+	right: 5px;
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	background-image: url('../img/menu-icon.png');
+	transition: background-image 0.5s;
+}
+
+	#menu_icon:hover {
+		background-image: url('../img/menu-icon-hover.png');
+	}
+	
+#menu_close {
+	display: block;
+	position: fixed;
+	z-index: 999;
+	width: 70px;
+	height: 70px;
+	top: 0;
+	right: -70px;
+	background-color: rgb(218, 218, 218);
+	background-image: url('../img/menu-close.png');
+	transition: background-image 0.5s;
+}
+	
+	#menu_close:hover {
+		background-image: url('../img/menu-close-hover.png');
+	}
+	
+#content {
+	border: 1px solid black;
+	margin: 0 0 10px 0;
+	font-size: 1.3em;
+	line-height: 1.5em;
+	background: white;
+}
+	
+	#content #inner_wrapper {
+		padding: 25px;
+		border: 1px solid black;
+	}
+		
+		#content #inner_wrapper .subject {
+			text-decoration: underline;
+			margin-bottom: 8px;
+		}
+		
+		#content a {
+			color: #ff8400;
+			text-decoration: none;
+		}
+		
+			#content a:hover {
+				text-decoration: underline;
+			}
+		
+		#content section {
+			margin: 80px 0;
+		}
+		
+		#content p {
+			margin-bottom: 20px;
+		}
+		
+		#content section p {
+			padding: 0 10px;
+		}
+		
+		#content h2 {
+			font-weight: normal;
+			font-size: 1.25em;
+			border-bottom: 1px solid black;
+			padding: 15px;
+			margin-bottom: 25px;
+			border: 1px solid #dadada;
+			background: #f7f7f7;
+		}
+		
+footer {
+	position: relative;
+	height: 20px;
+	margin: 10px 0 150px 0;
+	padding-left: 5px;
+}	
+	
+	footer p {
+		font-size: 0.9em;
+	}
+	
+	footer a { 
+		color: black; 
+		text-decoration: none;
+		letter-spacing: 1.5px;
+	}
+		
+		footer a:hover {
+			text-decoration: underline;
+		}
+	
+.first {
+	margin-top: 0!important;
+}	
+		
+.last {
+	margin-bottom: 0!important;
+}
+
+.project_box {
+	display: block;
+	width: 32%;
+	border: 1px solid #8F8F8F;
+	float: left;
+	margin-right: 15px;
+	height: 300px;
+	background-size: 100%;
+}
+
+	.project_box a {
+		display: block;
+		position: relative;
+		border: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.project_box .mask {
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		background: white;
+		opacity: 0.3;
+		transition: opacity 0.3s;
+		cursor: pointer;
+	}
+	
+	.project_box a .description {
+		position: absolute;
+		bottom: -80%;
+		left: 0;
+		background: white;
+		color: black;
+		font-size: 0.7em;
+		line-height: 20px;
+		transition: bottom 0.3s;
+		padding: 0;
+		margin: 0;
+		opacity: 0.9;
+	}
+	
+	.project_box a p {
+		margin: 0!important;
+		padding: 25px!important;
+	}
+	
+	.project_box a:hover .mask {
+		opacity: 0;
+	}
+	
+	.project_box a:hover .description {
+		bottom: 0;
+	}
+
+.project_box.mult_three {
+	margin-right: 0;
+	margin-bottom: 15px;
+}
+
+.breadcrumbs {
+	margin-bottom: 20px;
+	font-size: 0.8em;
+	background: #f7f7f7;
+	border: 1px solid #dadada;
+	padding: 3px 10px;
+}
+
+.slash {
+	font-size: 1.2em;
+}
+
+.img-box {
+	padding: 20px;
+	background-color: #ebebeb;
+	margin: 40px auto;
+}
+
+.img-box img {
+	border: none;
+	width: 100%;
+}
+
+.img-box .caption {
+	font-size: 0.7em;
+	line-height: 20px;
+	margin: 10px 0 0 0!important;
+}
+
+.ocd_list {
+	list-style-type: none;
+	margin-left: 10px;
+	margin-bottom: 15px;
+}
+
+p + .ocd_list {
+	margin-top: -15px;
+}
+
+.ocd_list li {
+    background: url("../img/bullet.gif") no-repeat left 10px;
+    padding-left: 1em;
+}
+
+		
+		
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on May 8, 2012 */
+@font-face {
+    font-family: 'HelveticaNeueRegular';
+    src: url('../fonts/helveticaneue-light-webfont.eot');
+    src: url('../fonts/helveticaneue-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneue-light-webfont.woff') format('woff'),
+         url('../fonts/helveticaneue-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on July 18, 2013 */
+@font-face {
+    font-family: 'gambler';
+    src: url('../fonts/gambler/gambler-webfont.eot');
+    src: url('../fonts/gambler/gambler-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gambler/gambler-webfont.woff') format('woff'),
+         url('../fonts/gambler/gambler-webfont.ttf') format('truetype'),
+         url('../fonts/gambler/gambler-webfont.svg#gamblerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.gambler {
+	font-family: gambler;
+}
+
+.img_float_right {
+	float: right;
+	width: 25%;
+	margin: 0 0 10px 10px;
+	padding: 0;
+	border: 1px solid gray;
+}
+
+
+@media (max-width : 1400px) {
+	.project_box {
+		width: 48%;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		height: 313px;
+	}
+	.project_box.mult_three {
+		margin: 10px;
+	}
+	.project_box.mult_two {
+		margin-right: 0;
+	}
+}
+
+@media (max-width : 1400px) and (min-width : 1000px) {
+	.project_box.mult_three {
+		margin: 0 20px 20px 0;
+	}
+}
+
+
+/* tablets */
+@media (max-width : 1000px) {
+	#wrapper {
+		width: 90%;
+	}
+	.project_box {
+		display: block;
+		width: 47%;
+		border: 1px solid gray;
+		float: left;
+		margin: 10px;
+		height: 287px;
+	}
+	.img_float_right {
+		width: 30%;
+	}
+	.project_box a .description {
+		bottom: 0;
+	}
+}
+
+/* make the menu collapse */
+@media (max-width : 730px) {
+	#wrapper {
+		width: 95%;
+	}
+	header nav {
+		position: absolute;
+		height: 30px;
+	}
+	header nav ul {
+		list-style-type: none;
+		position: fixed;
+		background: rgb(218, 218, 218);
+		top: 0;
+		right: -285px;
+		height: 100%;
+		z-index: 999;
+		width: 215px;
+	}
+	header nav ul li {
+		float: none;
+		clear: both;
+		position: relative;
+	}
+	header nav ul li a {
+		color: black;
+		text-decoration: none;
+		display: block;
+		font-size: 1.1em;
+		padding: 10px 25px;
+		height: 50px;
+		line-height: 50px;
+		border: none;
+		transition: background-color 0.25s;
+	}	
+	header nav ul li a:hover {
+		border: none;
+	}	
+	#menu_icon {
+		display: block;
+	}	
+	.desktop-only {
+		display: none;
+	}
+	.project_box {
+		display: block;
+		width: 99%;
+		border: 1px solid gray;
+		float: left;
+		margin: 0 0 25px 0;
+		height: 450px;
+	}
+	.project_box.mult_three {
+		margin: 0 0 25px 0;
+	}
+	.img_float_right  {
+		width: 40%;
+		padding: 0 0 5px 5px;
+	}
+}
+
+/* smartphones (portrait and landscape) */
+@media (max-width : 500px) {
+	#wrapper {
+		width: 100%;
+	}
+	header {
+		margin: 70px 10px 10px 10px;
+	}
+	#menu_icon {
+		right: 15px;
+	}
+	#content #inner_wrapper {
+		padding: 15px;
+	}
+	.img_float_right  {
+		width: 99%;
+		padding: 10px 0;
+	}
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colorize Example - niklassletteland.com</title>
+	
+	<style type="text/css">
+		body {
+			background: url('../tweed.png'); /*bg texture from http://subtlepatterns.com/ */
+		}
+		#wrap {
+			margin: 0 auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -178px 0 0 -334px;
+		}
+		#status {
+			position: relative;
+			height: 70px;
+		}
+		#shadow_canvas {
+			position: relative;
+			z-index: 999;
+			right: -700px;
+			display: none;
+		}
+		#image, #image img, .tmp_canvas, #cloak {
+			position: absolute;
+			height: 357px;
+			width: 668px;
+			z-index: 999999;
+		}
+	</style>
+	
+</head>
+<body>
+	
+	<div id="wrap">
+		<div id="inner_wrap">
+			<div id="image">
+				<img src="bw.jpg" />
+			</div>
+			<div id="cloak"></div>
+			
+			<canvas id="shadow_canvas" width="668" height="357"></canvas>
+		</div>
+	</div>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="colorize.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+/*
+Theme Name:     ns-blog
+Theme URI:      http://niklassletteland.com/blog/
+Description:    Child theme to match rest of niklassletteland.com
+Author:         Niklas Sletteland
+Author URI:     http://niklassletteland.com/
+Template:       twentyeleven
+Version:        0.1.0
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+	
+body {
+	font-family: calibri, 'HelveticaNeueRegular', helvetica, arial, sans-serif;
+	letter-spacing: 2px;
+}
+	
+#wrapper {
+	position: relative;
+	width: 760px;
+	margin: 0 auto;
+}
+	
+header {
+	margin: 70px 0 5px 0;
+	text-transform: uppercase;
+}
+	
+	header h1, header h2 {
+		font-weight: normal;
+	}
+		
+	header#main_header h1 {
+		font-size: 2em;
+		letter-spacing: 5px;
+		margin-bottom: 5px;
+	}
+		
+		header h1 a {
+			color: black;
+			text-decoration: none;
+		}
+		
+	header h2 {
+		font-size: 1.25em;
+		letter-spacing: normal;
+		text-indent: 40px;
+		letter-spacing: 2px;
+		margin-bottom: 10px;
+	}
+	
+	header nav {
+		position: relative;
+		height: 30px;
+	}
+	
+	header nav ul {
+		list-style-type: none;
+		}
+		
+		header nav ul li {
+			float: left;
+			}
+			
+			header nav ul li a {
+				color: black;
+				text-decoration: none;
+				font-size: 1.1em;
+				padding: 5px 8px;
+				border: 1px solid white;
+				transition: background-color 0.25s;
+				-moz-transition: background-color 0.25s; /* Firefox 4 */
+				-webkit-transition: background-color 0.25s; /* Safari and Chrome */
+				-o-transition: background-color 0.25s; /* Opera */
+				}
+				
+				header nav ul li a:hover {
+					border: 1px solid black;
+					}
+				
+				header nav ul li a#about:hover { background-color: #3C3CFF;}
+				header nav ul li a#portfolio:hover { background-color: #00BF00;}
+				header nav ul li a#sandbox:hover { background-color: #FF2828;}
+				header nav ul li a#blog:hover { background-color: #FFB12C;}
+				header nav ul li a#photography:hover { background-color: #3C3CFF;}
+				header nav ul li a#contact:hover { background-color: #FFB935;}
+				
+form#searchform { padding-bottom: 3px; }				
+				
+form#searchform label { display: none; }
+
+form#searchform input { padding: 7px; }
+	
+#body_stuff {
+	border: 1px solid black;
+	margin: 0 0 10px 0;
+	font-size: 1.2em;
+	}
+	
+	#body_stuff #inner_wrapper {
+		padding: 15px;
+		border: 1px solid black;
+		}
+		
+		#body_stuff #inner_wrapper .subject {
+			text-decoration: underline;
+			margin-bottom: 8px;
+		}
+			
+/*blog-specific styling*/
+header nav ul li a#blog {
+	background-color: #FFB12C;
+	border: 1px solid black;
+	}
+ 
+#body_stuff {
+	border: 1px solid #FFB12C;
+	}
+	
+	#body_stuff p {
+		margin: 0 0 15px 0;
+	}
+		
+	#body_stuff .code {
+		font-family: "Courier New",Courier,monospace;
+		background-color: #cccccc;
+		}
+		
+	#body_stuff ol {
+		margin-bottom: 15px;
+		}
+		
+	#body_stuff a {
+		color: #cc8110; /*#f09d18;*/
+		text-decoration: none;
+		}
+		
+		#body_stuff a:hover {
+			text-decoration: underline;
+			}
+			
+	#body_stuff .entry {
+		margin-bottom: 30px;
+		border-bottom: 1px dotted black;
+		}
+			
+			
+		#body_stuff .blog_header {
+			color: #f09d18;
+			margin-bottom: 10px;
+			text-decoration: underline;
+			}
+			
+		#body_stuff div.time {
+			font-size: 1.1em;
+			text-decoration: underline;
+			margin-bottom: 10px;
+			}
+
+.wp-caption {
+	background: #f0f0f0;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+	#body_stuff p.wp-caption-text {
+		font-size: 0.8em;
+		margin: 0;
+	}
+			
+.entry-content img { 
+	border: 1px solid gray; 
+	margin: 5px;
+}
+
+
+.entry-content h1, .entry-content h1 strong {
+	margin: 45px 0 20px 0;
+	font-weight: normal;
+	font-size: 1.3em!important;
+	border-bottom: 1px solid black;
+}
+		
+/*styling for 'code' snippets*/	
+ol {
+	background:#036 url('/images/gutter.gif') 2.3em 0 repeat-y;
+	overflow:auto;
+	font-family:"Courier New",Courier,mono;
+	margin:0;
+	padding:0.2em 0.2em 0.2em 2.8em;
+	color:#fff;
+	width:90%;
+}
+#body_stuff ol li {
+	background:#ffc;
+	font-size:small;
+}
+#body_stuff ol code {color:#036;}	
+
+
+#secondary aside {
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+	border-right: 1px solid black;
+	}
+	
+	#secondary aside#recent-posts-2 {
+		padding-right: 10px;
+	}
+	
+	#secondary aside#categories-2 {
+		padding: 0 10px;
+	}
+
+	#secondary aside#archives-2 {
+		padding-left: 10px;
+		border: none;
+	}
+	
+	#secondary aside ul {
+		list-style-type: none;
+	}
+	
+		#secondary aside ul li {
+			padding: 10px;
+			}
+	
+			#secondary aside ul li a {
+				font-size: 0.75em;
+				font-weight: normal;
+				color: black;
+				}
+				
+p.form-allowed-tags { display: none; }
+
+p.logged-in-as { display: none; }
+
+.form-submit input { padding: 7px; }
+
+h3#reply-title { padding: 25px 0 8px 0; }
+
+.single-post footer.entry-meta { display: none; }
+
+header.page-header { margin-top: 10px; }
+				
+footer {
+	position: relative;
+	width: 700px;
+	height: 20px;
+	margin: 10px 0 150px 0;
+	}	
+	
+	footer a { 
+		color: black; 
+		text-decoration: none;
+		letter-spacing: 1.5px;
+		}
+		
+		footer a:hover {
+			text-decoration: underline;
+			}	
+			
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on May 8, 2012 */
+@font-face {
+    font-family: 'HelveticaNeueRegular';
+    src: url('/fonts/helveticaneue-light-webfont.eot');
+    src: url('/fonts/helveticaneue-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/helveticaneue-light-webfont.woff') format('woff'),
+         url('/fonts/helveticaneue-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Blog styling*/
+body#blog img#banner {
+	position: relative;
+	left: -37px;
+	top: 10px;
+}
+
+article > header > img + h1 {
+	position: relative;
+	top: -10px;
+}
+
+.entry-header {
+	margin: 10px 0 10px 0;
+}
+
+.entry-meta span.by-author { display: none; }
+
+header .comments-link { display: none; }
+
+footer .cat-links, footer .sep { display: none; }
+
+footer.entry-meta {
+	margin: 10px 0 60px 0!important;
+}
+
+.syntaxhighlighter {
+	background: #f0f0f0;
+	border: 1px solid gray;
+}
+
+.syntaxhighlighter .container code, .syntaxhighlighter .gutter div.line {
+	font-size: 0.8em!important;
+}

@@ -1,0 +1,76 @@
+body {
+	background: url('../tweed.png'); /*bg texture from http://subtlepatterns.com/ */
+}
+#wrap {
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -220px 0 0 -330px;
+	border: 2px solid black;
+}
+#status {
+	position: relative;
+	height: 70px;
+}
+#shadow_canvas {
+	position: relative;
+	z-index: 999;
+	right: -700px;
+	display: none;
+}
+#image, #image img, .tmp_canvas, #cloak {
+	position: absolute;
+	height: 440px;
+	width: 660px;
+	z-index: 999999;
+}
+
+
+/***************************************************************************************************
+ * dynamic colorization image styles                                                               *
+ ***************************************************************************************************/
+#colorize img#color_img, #colorize-athens img#color_img_athens {
+	visibility: hidden;
+}
+#colorize img#bw_img, #colorize-athens img#bw_img_athens {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#colorize-athens {
+	position: relative;
+	border: 3px solid black;
+	padding: 1px;
+	width: 660px;
+	height: 440px;
+}
+#image-athens, #image-athens img {
+	position: relative;
+	height: 440px;
+	width: 660px;
+	border: none;
+	padding: 0px;
+}
+#cloak-athens {
+	position: absolute;
+	height: 440px;
+	width: 660px;
+	z-index: 999999;
+	top: 0px;
+}
+.tmp_canvas_athens {
+	position: absolute;
+	z-index: 1001;
+	height: 440px;
+	width: 660px;
+	top: 0px;
+}
+#shadow_canvas {
+	position: absolute;
+	display: none;
+	right: 999px;
+	top: 0;
+	right: -670px;
+}
+/********* end colorization image styles *******************/
